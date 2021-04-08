@@ -182,25 +182,3 @@ class MinimaxStrategy(Strategy):
             print('{}: {}'.format(state.board, minimax_value))
 
         return minimax_value
-
-
-class MinimaxAlphaBetaStrategy(Strategy):
-    """Minimax alpha-beta strategy."""
-
-    def __init__(
-        self,
-        heuristic: Heuristic,
-        max_depth_minimax: int,
-        verbose: int = 0,
-    ) -> None:
-        super().__init__(verbose)
-        self.heuristic = heuristic
-        self.max_depth_minimax = max_depth_minimax
-
-    def next_move(
-        self,
-        state: TwoPlayerGameState,
-        gui: bool = False,
-    ) -> TwoPlayerGameState:
-        """Compute next state in the game."""
-        pass
